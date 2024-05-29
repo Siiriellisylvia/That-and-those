@@ -1,0 +1,71 @@
+.NavBarContainer{
+width:100%;
+top:0;
+position:fixed;
+overflow: hidden;
+}
+
+.NavBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 4rem;
+
+}
+
+.NavBarLinks {
+    display: flex;
+    gap:1.5rem;
+    align-items: center;
+    width: 30%;
+}
+
+.NavBarIcons {
+    display: flex;
+    gap:1.5rem;
+    align-items: right;
+  }
+
+.hidden {
+    top: -100px;
+}
+
+.Dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.DropdownLink {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Dropbtn {
+  display: flex;
+  align-items: center;
+}
+
+.DropdownContent {
+  display: none;
+  position: absolute;
+  background-color: var(--off-white);
+  min-width: 12rem;
+  box-shadow: var(--box-shadow);
+  z-index: 1;
+}
+
+.DropdownContent a {
+  color: var(--leaf);
+  padding: 0.5rem 2rem 0.5rem 1.5rem;
+  text-decoration: none;
+  display: block;
+}
+
+.DropdownContent a:hover {
+  background-color: var(--sage-25);
+}
+
+.Dropdown:hover .DropdownContent {
+  display: block;
+}

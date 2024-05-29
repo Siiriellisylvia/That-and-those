@@ -1,0 +1,23 @@
+.splide__arrow {
+  background-color: var(--off-white); 
+  border-radius: 50%;
+  width: 3rem;
+  height:3rem;
+  box-shadow: var(--box-shadow);
+}
+
+.splide__arrow--prev {
+  left: -1.5rem;
+  top: 12rem;
+}
+
+.splide__arrow--next {
+  right: -1rem;
+  top: 12rem;
+}
+
+.splide__arrow svg {
+  fill: var(--dark-leaf); /* Change the color of the arrow icon */
+  width: 20px; /* Set the icon size */
+  height: 20px; /* Set the icon size */
+}

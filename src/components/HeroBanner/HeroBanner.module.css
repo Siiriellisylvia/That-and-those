@@ -1,0 +1,19 @@
+.heroContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  height: 90vh;
+  background-color: var(--blush);
+  /* background-image: url('../../assets/hero-placeholder.jpg'); */
+  background-size: cover;
+  background-position: center;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:50%;
+}

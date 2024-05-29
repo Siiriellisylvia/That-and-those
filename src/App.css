@@ -1,0 +1,73 @@
+:root {
+  --dark-leaf: rgb(52, 61, 45);
+  --leaf: #55644a;
+  --sage: #C3CDB9;
+  --sage-25: rgb(195, 205, 185, 0.25);
+  --terracotta: #dfb25b;
+  --blush:rgb(246, 235, 213);
+  --blush:#FFE0C6;
+  --sand: #FAEFE0;
+  --off-white: #fffcfa;
+  --heading-font: "Open Sans", sans-serif;
+  --body-font: "Poppins", sans-serif;
+  --h1-size: 2rem;
+  --h2-size: 1.5rem;
+  --h3-size: 1.25rem;
+  --h4-size: 1rem;
+  --p-size: 0.875rem;
+  --p-size-small: 0.75rem;
+  --box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+  --font-weight-bold: 700;
+  --font-weight-regular: 500;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--off-white);
+}
+
+p,a {
+    font-family: var(--body-font);
+    font-weight: var(--font-weight-regular);
+    color: var(--leaf);
+    text-decoration: none;
+    line-height:1.5;
+}
+
+h1 {
+    font-family: var(--heading-font);
+    font-weight: var(--font-weight-bold);
+    color: var(--leaf);
+    font-size: var(--h1-size);
+    letter-spacing: -1px;
+}
+
+h2 {
+    font-family: var(--heading-font);
+    font-weight: var(--font-weight-bold);
+    color: var(--leaf);
+    font-size: var(--h2-size);
+}
+
+h3 {
+    font-family: var(--heading-font);
+    font-weight: var(--font-weight-bold);
+    color: var(--leaf);
+    font-size: var(--h3-size);
+}
+
+h4 {
+    font-family: var(--heading-font);
+    font-weight: var(--font-weight-bold);
+    color: var(--dark-leaf);
+    font-size: var(--h4-size);
+}
+.pageContainer {
+ width:100%;
+}
+
+.page {
+    padding: 0.5rem 4rem;
+    background-color: var(--off-white);
+}

@@ -1,0 +1,19 @@
+.categoryLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    width:100%;
+}
+
+.categoryLinks a {
+    font-size: var(--h3-size);
+    font-weight: var(--font-weight-bold);
+    color: var(--leaf);
+    text-decoration: none;
+    padding:1rem;
+}
+
+.categoryLinks a:hover {
+    color: var(--dark-leaf);
+}

@@ -1,0 +1,17 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    gap:1rem;
+    height:20rem;
+    width:100%;
+}
+
+.header img {
+    height: 100%;
+    width:25%;
+}
+
+.bigImage {
+    width: 50%!important;
+    height: 100%;
+}

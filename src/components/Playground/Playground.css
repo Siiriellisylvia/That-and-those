@@ -1,0 +1,31 @@
+.navigation {
+  width: 100%;
+  background-color: #333;
+  transition: top 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+
+.navigation ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navigation ul li {
+  margin: 0 10px;
+}
+
+.navigation ul li a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.navigation ul li a:hover {
+  background-color: #555;
+}
+
+.hidden {
+  top: -100px; /* Move the navbar above the viewport when hidden */
+}

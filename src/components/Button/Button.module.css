@@ -1,0 +1,25 @@
+/* Button.module.css */
+.customButton {
+  padding: 0.75rem 2rem;
+  font-size: 16px;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: var(--font-weight-bold);
+}
+
+.customButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.sage {
+  background-color: var(--sage);
+  color: var(--dark-leaf);
+}
+
+.sage:hover {
+  background-color: var(--leaf);
+  color: var(--off-white);
+}
