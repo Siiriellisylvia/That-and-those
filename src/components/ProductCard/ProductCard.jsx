@@ -1,14 +1,21 @@
 import Styles from "../ProductCard/ProductCard.module.css";
 import ShoppingBasket from "../../assets/icons/shopping_basket_400.svg";
-import productImage from "../../assets/productImage.png";
+import { useNavigate } from "react-router-dom";
 
 export default function ProductCard({product}) {
-  console.log("Product:", product); // Log the product object
+
+    const navigate = useNavigate();
+
+    // Function to navigate to the product page
+    function openProduct() {
+      navigate(`/products/${product.id}`);
+    }
 
   return (
-    <div className={Styles.card}>
+    <div className={Styles.cardContainer}>
+    <div className={Styles.card} onClick={openProduct}>
       <div className={Styles.imageContainer}>
-        <img className={Styles.image} src={productImage} alt="product" />
+        <img className={Styles.image} src={product.mainImage} alt="product" />
       </div>
       <div className={Styles.contentContainer}>
         <div className={Styles.content}>
@@ -19,6 +26,7 @@ export default function ProductCard({product}) {
           <img src={ShoppingBasket} alt="add to basket" />
         </div>
       </div>
+    </div>
     </div>
   );
 }

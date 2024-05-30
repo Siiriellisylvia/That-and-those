@@ -23,3 +23,13 @@
   background-color: var(--leaf);
   color: var(--off-white);
 }
+
+.leaf {
+  background-color: var(--leaf);
+  color: var(--off-white);
+}
+
+.leaf:hover {
+  background-color: var(--sand);
+  color: var(--leaf);
+}

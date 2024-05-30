@@ -11,46 +11,13 @@ const productsData = [
     description:
       "For the latte lovers, this cup is perfect for your morning coffee. It's made of stoneware clay and is dishwasher safe.",
     date: new Date(),
-    categories: ["New", "Cups"],
-    name: "latte cup",
-    price: "250dkk",
+    categories: ["Cups"],
+    name: "kæmpe latte cup",
+    price: "300dkk",
     inStock: true,
-    colors: ["purple", "white"],
+    colors: ["coral"],
   },
-  {
-    image: "https://example.com/cup.jpg",
-    measurements: {
-      height: "10cm",
-      width: "9cm",
-      capacity: "300ml",
-    },
 
-    description:
-      "For the latte lovers, this cup is perfect for your morning coffee. It's made of stoneware clay and is dishwasher safe.",
-    date: new Date(),
-    categories: ["New", "Cups"],
-    name: "espresso cup",
-    price: "250dkk",
-    inStock: true,
-    colors: ["white", "brown"],
-  },
-  {
-    image: "https://example.com/cup.jpg",
-    measurements: {
-      height: "10cm",
-      width: "9cm",
-      capacity: "200ml",
-    },
-
-    description:
-      "For the latte lovers, this cup is perfect for your morning coffee. It's made of stoneware clay and is dishwasher safe.",
-    date: new Date(),
-    categories: ["New", "Cups"],
-    name: "cappuccino cup",
-    price: "250dkk",
-    inStock: true,
-    colors: ["coral", "pink", "yellow"],
-  },
 ];
 
 const addProducts = async () => {

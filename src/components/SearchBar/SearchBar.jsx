@@ -1,29 +1,35 @@
 import { useState } from "react";
 import Styles from "./SearchBar.module.css";
+import Button from "../Button/Button"; // If you don't need the button, you can remove this import
 
-export default function SearchBar ({ onSearch }) {
+export default function SearchBar({ onSearch }) {
   const [query, setQuery] = useState("");
 
+  // Function to handle the input change
   const handleChange = (e) => {
-    setQuery(e.target.value);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (query.trim() !== "") {
-      onSearch(query.trim());
-    }
+    const newQuery = e.target.value;
+    setQuery(newQuery);
+    onSearch(newQuery); // Call the onSearch function passed as a prop
   };
 
   return (
-    <form className={Styles.form} onSubmit={handleSubmit}>
-      <input
-        type="text"
-        value={query}
-        onChange={handleChange}
-        placeholder="Search..."
-      />
-      <button type="submit">Search</button>
-    </form>
+    <section className={`${Styles.searchBarContainer} page`}>
+      <div className={Styles.searchBarContent}>
+        <h4 className={Styles.searchBarColumn}>4 products</h4>
+        <div className={Styles.form}>
+          <input
+            type="text"
+            value={query}
+            onChange={handleChange}
+            placeholder="Search..."
+          />
+          <Button className="sage">Search</Button>
+        </div>
+        <div className={Styles.searchBarLinks}>
+          <h4>sort</h4>
+          <h4>filter</h4>
+        </div>
+      </div>
+    </section>
   );
 }

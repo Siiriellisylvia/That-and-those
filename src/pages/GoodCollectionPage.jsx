@@ -15,7 +15,7 @@ export default function GoodCollectionPage() {
 
   return (
     <>
-      <Header />
+      <Header title="the good collection" />
       <SearchBar onSearch={handleSearch} />
       <ul>
         {searchResults.map((result, index) => (

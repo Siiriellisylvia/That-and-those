@@ -15,14 +15,14 @@ export default function BowlsPage() {
 
   return (
     <>
-      <Header />
+      <Header title="bowls" />
       <SearchBar onSearch={handleSearch} />
       <ul>
         {searchResults.map((result, index) => (
           <li key={index}>{result}</li>
         ))}
       </ul>
-      <ProductList category="cups" />
+      <ProductList category="Bowls" />
     </>
   );
 }

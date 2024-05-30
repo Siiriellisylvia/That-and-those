@@ -16,6 +16,7 @@ overflow: hidden;
 .NavBarLinks {
     display: flex;
     gap:1.5rem;
+    justify-content: center;
     align-items: center;
     width: 30%;
 }

@@ -18,6 +18,6 @@
 
 .splide__arrow svg {
   fill: var(--dark-leaf); /* Change the color of the arrow icon */
-  width: 20px; /* Set the icon size */
-  height: 20px; /* Set the icon size */
+  width: 20px;
+  height: 20px
 }

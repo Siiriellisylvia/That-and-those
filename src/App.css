@@ -68,6 +68,6 @@ h4 {
 }
 
 .page {
-    padding: 0.5rem 4rem;
+    padding: 0rem 4rem 0rem 4rem;
     background-color: var(--off-white);
 }

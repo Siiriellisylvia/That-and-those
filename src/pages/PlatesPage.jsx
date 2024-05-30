@@ -15,7 +15,7 @@ export default function PlatesPage() {
 
   return (
     <>
-      <Header />
+      <Header title="plates"/>
       <SearchBar onSearch={handleSearch} />
       <ul>
         {searchResults.map((result, index) => (

@@ -1,0 +1,25 @@
+.bannerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--sage);
+    height:30rem;
+    width:100%;
+    margin: 2rem 0rem;
+}
+
+.bannerContent {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 2rem 2rem 0rem;
+}
+
+.bannerContent > Button {
+    margin-top:1rem;
+    width:50%;
+}
+.bannerImage{
+    width: 50%;
+    height: 100%;
+}

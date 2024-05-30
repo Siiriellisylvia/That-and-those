@@ -1,6 +1,52 @@
-form {
+.searchBarContainer {
+    margin: 1rem 0rem;
+}
+
+.searchBarContent {
+    width:100%;
     display: flex;
+    flex-direction:row;
+
+}
+
+.searchBarColumn {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width:25%;
+}
+
+.form {
+    margin-top: 1rem;
+    display: flex ;
     justify-content: center;
     align-items: center;
-    margin-top: 1rem;
+    height:2.25rem;
+    width:50%;
+    box-shadow: var(--box-shadow);
+}
+
+.form input {
+    border: none;
+    width:100%;
+    height:2.6rem;
+}
+
+input[type=text] {
+    padding: 0rem 0.5rem;
+    font-size: var(--p-size);
+    box-shadow: none;
+}
+
+.form input:focus {
+    outline: none;
+    box-shadow: none;
+    background-color: var(--sage-25);
+}
+
+.searchBarLinks {
+    display: flex;
+    gap: 1rem;
+    width:25%;
+    justify-content:right;
 }
