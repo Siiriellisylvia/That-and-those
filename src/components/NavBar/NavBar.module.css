@@ -1,16 +1,17 @@
-.NavBarContainer{
+/* .NavBarContainer{
 width:100%;
 top:0;
 position:fixed;
 overflow: hidden;
-}
+background-color: var(--leaf);
+} */
 
 .NavBar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 4rem;
-
+    background-color: var(--off-white);
 }
 
 .NavBarLinks {

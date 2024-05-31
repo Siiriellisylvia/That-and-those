@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { productsRef } from "../../../firebase-config.js";
 import ProductCard from "../ProductCard/ProductCard";
 import "../ProductCarousel/ProductCarousel.css";
-import NoProductBanner from "../Banners/NoProductBanner/NoProductBanner.jsx";
+import NoProductBanner from "../Banners/NoProductBanner/NoProductBanner";
 
 export default function ProductCarousel({ category, setHasProducts}) {
   const [products, setProducts] = useState([]);
@@ -37,7 +37,7 @@ export default function ProductCarousel({ category, setHasProducts}) {
     });
 
     return () => unsubscribe();
-  }, [category]);
+  }, [category, setHasProducts]);
 
   //Show arrows only if there are more than 4 products
   const showArrows = products.length > 4;
@@ -64,6 +64,6 @@ export default function ProductCarousel({ category, setHasProducts}) {
       ))}
     </Splide>
   ) : (
-    <NoProductBanner/>
-  ));
+    // Show the NoProductBanner component if there are no products
+    <NoProductBanner />));
 }

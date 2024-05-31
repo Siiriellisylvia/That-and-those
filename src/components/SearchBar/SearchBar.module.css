@@ -1,19 +1,12 @@
 .searchBarContainer {
     margin: 1rem 0rem;
+    width:50%;
 }
 
 .searchBarContent {
     width:100%;
     display: flex;
     flex-direction:row;
-
-}
-
-.searchBarColumn {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    width:25%;
 }
 
 .form {
@@ -22,8 +15,8 @@
     justify-content: center;
     align-items: center;
     height:2.25rem;
-    width:50%;
     box-shadow: var(--box-shadow);
+    width:100%;
 }
 
 .form input {
@@ -42,11 +35,4 @@ input[type=text] {
     outline: none;
     box-shadow: none;
     background-color: var(--sage-25);
-}
-
-.searchBarLinks {
-    display: flex;
-    gap: 1rem;
-    width:25%;
-    justify-content:right;
 }

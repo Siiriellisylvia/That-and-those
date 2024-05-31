@@ -1,0 +1,28 @@
+.cart {
+  display: flex;
+  flex-direction: column;
+  height: 100%;  /* Ensure it takes full height */
+}
+
+.cart > Button {
+    margin-top: 1rem;
+}
+
+.cartItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cartItem img {
+  width: 7rem; /* Adjust based on your needs */
+  height: auto;
+}
+
+.checkbox {
+  margin-top: 1rem;
+}
+
+.checkoutButton {
+  margin-top: 1rem;
+}

@@ -1,7 +1,17 @@
 .banner {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    margin-top:3rem;
     align-items: center;
     height:20rem;
+}
 
+.banner h3 {
+    text-align: center;
+    margin:0.1rem;
+}
+.banner p {
+    text-align: center;
+    width:50%;
+    margin-top:rem;
 }

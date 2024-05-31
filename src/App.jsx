@@ -11,6 +11,7 @@ import ProductPage from './pages/ProductPage';
 import ShopPage from './pages/ShopPage';
 import ContactPage from './pages/ContactPage';
 import GoodCollectionPage from './pages/GoodCollectionPage';
+import PlatesPage from './pages/PlatesPage';
 
 function App() {
 
@@ -22,8 +23,12 @@ function App() {
         <Route path="/shop" element={<ShopPage />} />
         <Route path="/products/:productId" element={<ProductPage />} />
         <Route path="/shop/cups" element={<CupsPage />} />
-        <Route path="/shop/thegoodcollection" element={<GoodCollectionPage />} />
+        <Route
+          path="/shop/thegoodcollection"
+          element={<GoodCollectionPage />}
+        />
         <Route path="/shop/bowls" element={<BowlsPage />} />
+        <Route path="/shop/plates" element={<PlatesPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/playground" element={<Playground />} />

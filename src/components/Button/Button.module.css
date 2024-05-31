@@ -22,6 +22,8 @@
 .sage:hover {
   background-color: var(--leaf);
   color: var(--off-white);
+  transition: all 0.3s ease;
+
 }
 
 .leaf {
@@ -30,6 +32,7 @@
 }
 
 .leaf:hover {
-  background-color: var(--sand);
-  color: var(--leaf);
+  color: var(--sand);
+  background-color: var(--leaf-75);
+  transition: left 0.3s ease;
 }

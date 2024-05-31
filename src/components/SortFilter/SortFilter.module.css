@@ -1,0 +1,8 @@
+.sortAndFilterContainer {
+  display: flex;
+  flex-direction:row;
+  gap:1rem;
+  align-items: center;
+  justify-content: right;
+  width:10rem;
+}
