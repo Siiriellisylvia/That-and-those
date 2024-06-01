@@ -3,7 +3,7 @@ import Styles from "./AboutBanner.module.css";
 
 export default function AboutBanner() {
   return (
-    <div className={`${Styles.bannerContainer} page`}>
+    <div className={Styles.bannerContainer}>
       <div className={Styles.bannerContent}>
         <h2>Who is behind the wheel?</h2>
         <p>

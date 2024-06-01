@@ -5,13 +5,17 @@ import ExpandMore from "../../assets/icons/expand_more.svg";
 import ShoppingBasket from "../../assets/icons/shopping_basket_400.svg";
 import Styles from "../NavBar/NavBar.module.css";
 import { useState, useEffect, useRef } from "react";
+import { useCart } from "../Helpers/UseCart";
 
 export default function NavBar() {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
   const [dropdownVisible, setDropdownVisible] = useState(false);
+
   const dropdownRef = useRef(null);
 
+  const {toggleCart, cartItems } = useCart(); // Destructure to get cartItems
+  const cartItemCount = cartItems.length; // You can count the number of items or calculate the total quantity based on your cart item structure
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,23 +37,23 @@ export default function NavBar() {
     };
   }, [prevScrollPos, visible]);
 
-const handleHover = () => {
-  setDropdownVisible(true);
-};
+  const handleHover = () => {
+    setDropdownVisible(true);
+  };
 
-const handleLeave = () => {
-  setDropdownVisible(false);
-};
+  const handleLeave = () => {
+    setDropdownVisible(false);
+  };
 
   const handleLinkClick = () => {
     setDropdownVisible(false);
   };
 
-const closeDropdown = (e) => {
-  if (!e.target.closest(`.${Styles.Dropdown}`)) {
-    setDropdownVisible(false);
-  }
-};
+  const closeDropdown = (e) => {
+    if (!e.target.closest(`.${Styles.Dropdown}`)) {
+      setDropdownVisible(false);
+    }
+  };
 
   useEffect(() => {
     document.addEventListener("click", closeDropdown);
@@ -58,7 +62,6 @@ const closeDropdown = (e) => {
       document.removeEventListener("click", closeDropdown);
     };
   }, []);
-
 
   return (
     <section className={visible ? "NavBar" : "NavBar hidden"}>
@@ -82,9 +85,7 @@ const closeDropdown = (e) => {
               >
                 Shop
               </Link>
-              <img
-                src={ExpandMore}
-                alt="expand-dropdown"/>
+              <img src={ExpandMore} alt="expand-dropdown" />
             </div>
             {dropdownVisible && (
               <div className={Styles.DropdownContent}>
@@ -108,17 +109,20 @@ const closeDropdown = (e) => {
           </div>
           <Link to="/about">About</Link>
           <Link to="/contact">Contact</Link>
-          </div>
-          <div className={Styles.NavBarIcons}>
+        </div>
+        <div className={Styles.NavBarIcons}>
           <Link to="/search">
             <img src={SearchIcon} alt="potato-logo" />
           </Link>
 
-          <Link className="icons" to="/cart">
+          <Link className="icons" onClick={toggleCart}>
             <img src={ShoppingBasket} alt="potato-logo" />
+            {cartItemCount > 0 && (
+              <span className={Styles.CartItemCount}>{cartItemCount}</span> // Styling for this span should make it appear as a leaf-colored ellipse
+            )}
           </Link>
-          </div>
         </div>
+      </div>
     </section>
   );
 }

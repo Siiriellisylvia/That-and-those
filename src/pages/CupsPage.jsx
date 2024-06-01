@@ -1,10 +1,11 @@
 import ProductList from '../components/ProductList/ProductList';
 import SearchBar from '../components/SearchBar/SearchBar';
 import Header from '../components/Header/Header';
-import useProductFilter from '../components/HelperHooks/useProductFilter';
+import useProductFilter from '../components/Helpers/useProductFilter';
 import Styles from "./CategoryPages.module.css";
 import ProductCount from '../components/ProductCount/ProductCount';
 import SortFilter from '../components/SortFilter/SortFIlter';
+import Cart from '../components/Cart/Cart';
 
 
 export default function CupsPage () {
@@ -20,6 +21,7 @@ export default function CupsPage () {
         <SortFilter />
       </div>{" "}
       <ProductList products={filteredProducts} />
+      <Cart/>
     </div>
   );
 }

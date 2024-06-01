@@ -59,9 +59,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--off-white);
     padding:0.5rem 4rem;
     font-size: var(--p-size-small);
+    background-color: var(--sage-light);
 }
 
 .bottom img {

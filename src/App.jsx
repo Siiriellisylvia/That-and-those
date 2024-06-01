@@ -12,29 +12,35 @@ import ShopPage from './pages/ShopPage';
 import ContactPage from './pages/ContactPage';
 import GoodCollectionPage from './pages/GoodCollectionPage';
 import PlatesPage from './pages/PlatesPage';
+import Cart from './components/Cart/Cart';
+import { CartProvider } from './components/Helpers/CartContext';
 
 function App() {
 
   return (
-    <main>
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/shop" element={<ShopPage />} />
-        <Route path="/products/:productId" element={<ProductPage />} />
-        <Route path="/shop/cups" element={<CupsPage />} />
-        <Route
-          path="/shop/thegoodcollection"
-          element={<GoodCollectionPage />}
-        />
-        <Route path="/shop/bowls" element={<BowlsPage />} />
-        <Route path="/shop/plates" element={<PlatesPage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/playground" element={<Playground />} />
-      </Routes>
-      <Footer />
-    </main>
+    <CartProvider>
+      <main>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/shop" element={<ShopPage />} />
+          <Route path="/products/:productId" element={<ProductPage />} />
+          <Route path="/shop/cups" element={<CupsPage />} />
+          <Route
+            path="/shop/thegoodcollection"
+            element={<GoodCollectionPage />}
+          />
+          <Route path="/shop/bowls" element={<BowlsPage />} />
+          <Route path="/shop/plates" element={<PlatesPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/playground" element={<Playground />} />
+        </Routes>
+        <Footer />
+      </main>
+      <Cart />
+    </CartProvider>
   );
 }
 

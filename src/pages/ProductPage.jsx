@@ -4,37 +4,53 @@ import { doc, getDoc } from "firebase/firestore";
 import { productsRef } from "../../firebase-config";
 import Styles from "./ProductPage.module.css";
 import Button from "../components/Button/Button";
+import Accordion from "../components/Accordion/Accordion";
+import { useCart } from "../components/Helpers/UseCart";
 
 
 export default function ProductPage() {
   const { productId } = useParams();
   const [product, setProduct] = useState(null);
   const [activeImage, setActiveImage] = useState("");
+  const { addToCart } = useCart(); // Use addToCart from the context
 
   // Fetch the product data based on the productId
-  useEffect(() => {
-    const fetchProduct = async () => {
-      const productDoc = doc(productsRef, productId); // Reference to a single product
-      try {
-        const docSnap = await getDoc(productDoc);
-        if (docSnap.exists()) {
-          const data = docSnap.data();
-          setProduct(data);
-          setActiveImage(data.mainImage || data.thumbnailImages[0]); // Set initial active image
-        } else {
-          console.log("No such product!");
-        }
-      } catch (error) {
-        console.error("Failed to fetch product", error);
+useEffect(() => {
+  const fetchProduct = async () => {
+    const productDoc = doc(productsRef, productId); // Reference to a single product
+    try {
+      const docSnap = await getDoc(productDoc);
+      if (docSnap.exists()) {
+        const productData = {
+          id: docSnap.id, // Include the document ID in the product object
+          ...docSnap.data(),
+        };
+        setProduct(productData);
+        setActiveImage(productData.mainImage || productData.thumbnailImages[0]); // Set initial active image
+      } else {
+        console.log("No such product!");
       }
-    };
+    } catch (error) {
+      console.error("Failed to fetch product", error);
+    }
+  };
 
-    fetchProduct();
-  }, [productId]);
+  fetchProduct();
+}, [productId]);
+
 
   // Function to handle thumbnail click
   const handleThumbnailClick = (image) => {
     setActiveImage(image); // Set the active image to the clicked thumbnail
+  };
+
+const handleAddToCart = () => {
+  if (product) {
+    addToCart(product);
+    console.log("Adding to cart", product); // Check what product is being added
+  } else {
+    console.log("No product to add"); // Debug: check if the product is null
+  }
   };
 
   return (
@@ -53,7 +69,7 @@ export default function ProductPage() {
                     ? Styles.activeThumbnail
                     : Styles.thumbnail
                 }
-            onClick={() => handleThumbnailClick(img)}
+                onClick={() => handleThumbnailClick(img)}
               />
             ))}
           </div>
@@ -64,11 +80,28 @@ export default function ProductPage() {
               className={Styles.mainImage}
             />
           </div>
-          <div className={Styles.detailsContainer}>
+          <div className={Styles.detailsContainer} key={product.id}>
             <h2>{product.name}</h2>
             <p className={Styles.price}>{product.price}</p>
             <p className={Styles.description}>{product.description}</p>
-            <Button className="sage">Add to Cart</Button>
+            <Button className="sage" onClick={handleAddToCart}
+            >Add to cart</Button>
+
+            <Accordion title="Pickup and returns">
+              Only pickup in Aarhus C, returns within 14 days
+            </Accordion>
+            <Accordion title="Measurements">
+              <div>
+                Capacity: {product.measurements.capacity}
+                <br />
+                Height: {product.measurements.height}
+                <br />
+                Weight: {product.measurements.weight}
+              </div>
+            </Accordion>
+            <Accordion title="Care instructions">
+              Microwave, freezer, oven safe
+            </Accordion>
           </div>
         </div>
       ) : (

@@ -1,6 +1,6 @@
 import ProductList from "../components/ProductList/ProductList";
 import SearchBar from "../components/SearchBar/SearchBar";
-import useProductFilter from "../components/HelperHooks/useProductFilter";
+import useProductFilter from "../components/Helpers/useProductFilter";
 import ProductCount from "../components/ProductCount/ProductCount";
 import Styles from "./CategoryPages.module.css";
 

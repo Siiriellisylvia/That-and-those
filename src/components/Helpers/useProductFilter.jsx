@@ -1,4 +1,3 @@
-// useProductFilter.js
 import { useState, useEffect } from "react";
 import { query, where, onSnapshot } from "firebase/firestore";
 import { productsRef } from "../../../firebase-config";

@@ -1,7 +1,7 @@
 import ProductList from "../components/ProductList/ProductList";
 import SearchBar from "../components/SearchBar/SearchBar";
 import Header from "../components/Header/Header";
-import useProductFilter from "../components/HelperHooks/useProductFilter";
+import useProductFilter from "../components/Helpers/useProductFilter";
 
 export default function PlatesPage() {
   const { filteredProducts, searchQuery, setSearchQuery } =

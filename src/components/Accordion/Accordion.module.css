@@ -1,0 +1,42 @@
+.accordionContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: space-between;
+}
+
+.accordionTitle {
+    font-size: var(--h4-size);
+    font-weight: var(--font-weight-bold);
+    font-family: var(--heading-font);
+    color: var(--leaf);
+  margin: 0rem;
+  cursor: pointer;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--leaf-75);
+  padding: 0rem 0rem 0.5rem 0rem;
+}
+
+.accordionContainer > p {
+    padding: 0.5rem 0rem;
+  margin: 0rem;
+}
+
+.titleClosed {
+  border-bottom: 1px solid #ccc; /* Divider when content is closed */
+}
+
+.titleOpen {
+  border-bottom: none; /* Hide divider when content is open */
+}
+
+.contentOpen {
+  border-bottom: 1px solid #ccc; /* Divider above content when open */
+}
+
+.contentClosed {
+  border-bottom: none; 
+}
