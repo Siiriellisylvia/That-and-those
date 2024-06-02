@@ -82,7 +82,7 @@ useEffect(() => {
           </div>
           <div className={Styles.detailsContainer} key={product.id}>
             <h2>{product.name}</h2>
-            <p className={Styles.price}>{product.price}</p>
+            <p className={Styles.price}>{product.price.amount} {product.price.currency}</p>
             <p className={Styles.description}>{product.description}</p>
 
             {/* Conditional rendering based on if the product is already in the cart */}

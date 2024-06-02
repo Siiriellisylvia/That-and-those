@@ -13,20 +13,22 @@ export default function ProductCard({product}) {
 
   return (
     <div className={Styles.cardContainer}>
-    <div className={Styles.card} onClick={openProduct}>
-      <div className={Styles.imageContainer}>
-        <img className={Styles.image} src={product.mainImage} alt="product" />
-      </div>
-      <div className={Styles.contentContainer}>
-        <div className={Styles.content}>
-          <div>
-            <h4>{product?.name}</h4>
-            <p>{product?.price}</p>
+      <div className={Styles.card} onClick={openProduct}>
+        <div className={Styles.imageContainer}>
+          <img className={Styles.image} src={product.mainImage} alt="product" />
+        </div>
+        <div className={Styles.contentContainer}>
+          <div className={Styles.content}>
+            <div>
+              <h4>{product?.name}</h4>
+              <p>
+                {product?.price.amount} {product?.price.currency}
+              </p>
+            </div>
+            <img src={ShoppingBasket} alt="add to basket" />
           </div>
-          <img src={ShoppingBasket} alt="add to basket" />
         </div>
       </div>
-    </div>
     </div>
   );
 }

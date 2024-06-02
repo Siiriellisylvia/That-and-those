@@ -29,6 +29,13 @@ body {
     background-color: var(--off-white);
 }
 
+.no-scroll {
+  overflow: hidden !important; /* Adding !important to ensure it overrides other styles */
+  height: 100%; /* Lock the height if necessary */
+  width: 100%; /* Lock the width to prevent width adjustment */
+  position: fixed; /* Optionally make body fixed */
+}
+
 p,a {
     font-family: var(--body-font);
     font-weight: var(--font-weight-regular);

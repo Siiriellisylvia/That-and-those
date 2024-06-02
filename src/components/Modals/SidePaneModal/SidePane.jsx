@@ -4,24 +4,28 @@ import Styles from "./SidePane.module.css";
 const Modal = ({ isOpen, onClose, children }) => {
   const modalRef = useRef();
 
-  // Function to handle click outside of modal content
-  const handleClickOutside = (event) => {
-    if (modalRef.current && !modalRef.current.contains(event.target)) {
-      onClose(); // Close modal if click is outside modal content
-    }
-  };
-
-  // Effect to add and remove the event listener
+  // Handle click outside of modal content
   useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (modalRef.current && !modalRef.current.contains(event.target)) {
+        onClose(); // Close modal if click is outside modal content
+      }
+    };
+
+    // Manage scroll and click listeners
+    const body = document.body;
     if (isOpen) {
       document.addEventListener("mousedown", handleClickOutside);
+      body.classList.add("no-scroll");
     } else {
       document.removeEventListener("mousedown", handleClickOutside);
+      body.classList.remove("no-scroll");
     }
 
-    // Cleanup the event listener on component unmount
+    // Cleanup
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
+      body.classList.remove("no-scroll"); // Make sure to clean this up
     };
   }, [isOpen, onClose]);
 
