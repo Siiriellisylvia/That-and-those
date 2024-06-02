@@ -9,11 +9,15 @@
 .categoryLinks a {
     font-size: var(--h3-size);
     font-weight: var(--font-weight-bold);
-    color: var(--leaf);
+    color: var(--leaf-75);
     text-decoration: none;
     padding:1rem;
 }
 
 .categoryLinks a:hover {
+    color: var(--dark-leaf);
+}
+
+.categoryLinks a.selected {
     color: var(--dark-leaf);
 }

@@ -12,7 +12,7 @@ export default function ProductPage() {
   const { productId } = useParams();
   const [product, setProduct] = useState(null);
   const [activeImage, setActiveImage] = useState("");
-  const { addToCart } = useCart(); // Use addToCart from the context
+  const { addToCart, isProductInCart } = useCart(); // Use addToCart from the context
 
   // Fetch the product data based on the productId
 useEffect(() => {
@@ -44,14 +44,14 @@ useEffect(() => {
     setActiveImage(image); // Set the active image to the clicked thumbnail
   };
 
-const handleAddToCart = () => {
-  if (product) {
-    addToCart(product);
-    console.log("Adding to cart", product); // Check what product is being added
-  } else {
-    console.log("No product to add"); // Debug: check if the product is null
-  }
-  };
+// const handleAddToCart = () => {
+//   if (product) {
+//     addToCart(product);
+//     console.log("Adding to cart", product); // Check what product is being added
+//   } else {
+//     console.log("No product to add"); // Debug: check if the product is null
+//   }
+//   };
 
   return (
     <div className="page">
@@ -84,8 +84,15 @@ const handleAddToCart = () => {
             <h2>{product.name}</h2>
             <p className={Styles.price}>{product.price}</p>
             <p className={Styles.description}>{product.description}</p>
-            <Button className="sage" onClick={handleAddToCart}
-            >Add to cart</Button>
+
+            {/* Conditional rendering based on if the product is already in the cart */}
+            {isProductInCart(product.id) ? (
+              <Button disabled className="sage">
+                Already in cart
+              </Button>
+            ) : (
+              <Button className= "sage" onClick={() => addToCart(product)}>Add to cart</Button>
+            )}
 
             <Accordion title="Pickup and returns">
               Only pickup in Aarhus C, returns within 14 days

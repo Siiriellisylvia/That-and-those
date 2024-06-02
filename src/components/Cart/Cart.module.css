@@ -1,7 +1,20 @@
 .cart {
   display: flex;
   flex-direction: column;
-  height: 100%;  /* Ensure it takes full height */
+  height: 100%;
+}
+
+.cartHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cartHeader img {
+  width: 2rem;
+  height: auto;
+  cursor: pointer;
 }
 
 .cart > Button {

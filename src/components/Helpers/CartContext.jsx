@@ -6,6 +6,7 @@ export const CartContext = createContext({
   removeFromCart: () => {},
   isCartOpen: false,
   toggleCart: () => {},
+  isProductInCart: () => false,
 });
 
 export const CartProvider = ({ children }) => {
@@ -13,11 +14,14 @@ export const CartProvider = ({ children }) => {
   const [isCartOpen, setIsCartOpen] = useState(false);
 
   const addToCart = (product) => {
-    console.log("Adding to cart:", product.id); // Ensure IDs are present and correct
+    if (!isProductInCart(product.id)) {
+      setCartItems((prevItems) => [...prevItems, product]);
+      setIsCartOpen(true);
+    }
+  };
 
-    setCartItems((prevItems) => [...prevItems, product]);
-    console.log("Product added, opening cart...");
-    setIsCartOpen(true);
+  const isProductInCart = (productId) => {
+    return cartItems.some((item) => item.id === productId);
   };
 
 const removeFromCart = (productId) => {
@@ -45,7 +49,14 @@ const removeFromCart = (productId) => {
 
   return (
     <CartContext.Provider
-      value={{ cartItems, addToCart, removeFromCart, isCartOpen, toggleCart }}
+      value={{
+        cartItems,
+        addToCart,
+        removeFromCart,
+        isCartOpen,
+        toggleCart,
+        isProductInCart,
+      }}
     >
       {children}
     </CartContext.Provider>

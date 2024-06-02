@@ -25,12 +25,16 @@ import { useNavigate } from "react-router-dom";
               : `/shop/${selectedCategory.toLowerCase()}`;
           navigate(path);
         };
+console.log("Selected Category in HomeProductModule:", selectedCategory);
 
         return (
           <div className="page">
             <div className={Styles.homeProductModule}>
               <h4>New products</h4>
-              <CategoryLinks onCategoryChange={handleCategoryChange} />
+              <CategoryLinks
+                onCategoryChange={handleCategoryChange}
+                selectedCategory={selectedCategory}
+              />
               {/* Show the carousel only if there are products */}
               <ProductCarousel
                 category={selectedCategory}
@@ -38,7 +42,9 @@ import { useNavigate } from "react-router-dom";
               />
               {/* If there are products, show the button */}
               {hasProducts && (
-                <Button className="sage" onClick={handleExploreCategory}>Explore the category</Button>
+                <Button className="sage" onClick={handleExploreCategory}>
+                  Explore the category
+                </Button>
               )}
             </div>
           </div>

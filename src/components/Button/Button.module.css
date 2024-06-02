@@ -36,3 +36,9 @@
   background-color: var(--leaf-75);
   transition: left 0.3s ease;
 }
+
+
+.disabled {
+  background-color: var(--sage-25);
+  color: var(--leaf);
+}
