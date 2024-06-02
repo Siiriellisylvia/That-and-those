@@ -10,7 +10,7 @@ export default function BowlsPage() {
   return (
     <>
     <div>
-      <Header title="Bowls" />
+      <Header title="bowls" />
       <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <ProductList products={filteredProducts} />
     </div>

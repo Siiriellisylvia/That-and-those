@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom';
 import Button from '../Button/Button';
 import Styles from '../HeroBanner/HeroBanner.module.css';
 
@@ -13,7 +14,7 @@ export default function HeroBanner() {
                 fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed
                 consequat, leo eget bibendum sodales, augue velit cursus nunc,
             </p>
-            <Button className="leaf">Explore products</Button>
+            <Link to ="/shop"><Button className="leaf">Explore products</Button></Link>
         </div>
       </section>
     );

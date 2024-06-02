@@ -10,7 +10,7 @@ export default function GoodCollectionPage() {
   return (
     <>
       <div>
-        <Header title="good collection" />
+        <Header title="the good collection" />
         <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
         <ProductList products={filteredProducts} />
       </div>

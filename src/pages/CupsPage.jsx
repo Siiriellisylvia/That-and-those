@@ -14,12 +14,12 @@ export default function CupsPage () {
 
   return (
     <div>
-      <Header title="Cups" />{" "}
+      <Header title="cups" />
       <div className={`${Styles.searchContainer} page`}>
         <ProductCount count={filteredProducts.length} />
         <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
         <SortFilter />
-      </div>{" "}
+      </div>
       <ProductList products={filteredProducts} />
       <Cart/>
     </div>

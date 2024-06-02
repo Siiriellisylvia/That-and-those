@@ -14,7 +14,7 @@ export default function ShopPage () {
 
   return (
     <div>
-      <Header title="Shop" />
+      <Header title="shop" />
       <div className={`${Styles.searchContainer} page`}> 
         <ProductCount count={filteredProducts.length} />
         <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
