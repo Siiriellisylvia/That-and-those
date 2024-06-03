@@ -5,10 +5,20 @@ import { useCart } from "../Helpers/UseCart.jsx";
 import CloseButton from "../../assets/icons/close_small.svg";
 import Remove from "../../assets/icons/delete_400.svg";
 import Checkmark from "../../assets/icons/check_circle.svg";
+import { useNavigate } from "react-router-dom";
+
 
 export default function Cart() {
+  const navigate = useNavigate();
+
   const { cartItems, isCartOpen, toggleCart, removeFromCart, lastAdded } =
     useCart();
+
+  // Combined function to handle product name click
+  function handleProductNameClick(productId) {
+    toggleCart(); // Close the cart
+    navigate(`/products/${productId}`); // Navigate to the product page
+  }
 
   const totalPrice = cartItems.reduce(
     (acc, item) => acc + parseFloat(item.price.amount),
@@ -39,7 +49,7 @@ export default function Cart() {
                   <div key={index} className={Styles.cartItem}>
                     <img src={item.thumbnailImages[0]} alt={item.name} />
                     <div className={Styles.cartItemDetails}>
-                      <h4>{item.name}</h4>
+                      <h4 onClick={() => handleProductNameClick(item.id)}>{item.name}</h4>
                       <div className={Styles.priceDelete}>
                         <p>
                           {item.price.amount} {item.price.currency}

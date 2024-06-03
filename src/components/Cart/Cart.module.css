@@ -61,6 +61,7 @@
 
 .cartItemDetails h4 {
   margin: 0rem;
+  cursor:pointer;
 }
 
 .priceDelete {

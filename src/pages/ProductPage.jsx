@@ -6,6 +6,7 @@ import Styles from "./ProductPage.module.css";
 import Button from "../components/Button/Button";
 import Accordion from "../components/Accordion/Accordion";
 import { useCart } from "../components/Helpers/UseCart";
+import Breadcrumbs from "../components/Breadcrumbs/Breadcrumbs";
 
 
 export default function ProductPage() {
@@ -56,6 +57,10 @@ useEffect(() => {
   return (
     <div className="page">
       {product ? (
+        <>
+            {product.categories && product.categories[0] && (
+            <Breadcrumbs category={product.categories[0]} />
+          )}
         <div className={Styles.productPageContainer}>
           <div className={Styles.thumbnailsContainer}>
             {/* Map through the thumbnail images and render an img element for each thumbnail */}
@@ -120,7 +125,7 @@ useEffect(() => {
               Microwave, freezer, oven safe
             </Accordion>
           </div>
-        </div>
+        </div></>
       ) : (
         <p>Loading product...</p>
       )}
