@@ -1,10 +1,12 @@
 import Styles from "../ProductCard/ProductCard.module.css";
-import ShoppingBasket from "../../assets/icons/shopping_basket_400.svg";
+// import ShoppingBasket from "../../assets/icons/shopping_basket_400.svg";
 import { useNavigate } from "react-router-dom";
 import Tag from "../Tag/Tag";
+// import { useCart } from "../Helpers/UseCart";
 
 export default function ProductCard({ product }) {
   const navigate = useNavigate();
+  // const { addToCart } = useCart(); // Assumed useCart includes addToCart function
 
   // Calculate if the product is new
   const isNew =
@@ -16,6 +18,12 @@ export default function ProductCard({ product }) {
   function openProduct() {
     navigate(`/products/${product.id}`);
   }
+
+  // // Function to add product to cart
+  // function handleAddToCart(event) {
+  //   event.stopPropagation(); // Prevents the card onClick from triggering when the icon is clicked
+  //   addToCart(product);
+  // }
 
   return (
     <section className={Styles.cardContainer}>
@@ -33,7 +41,14 @@ export default function ProductCard({ product }) {
                 {product.price.amount} {product.price.currency}
               </p>
             </div>
-            <img src={ShoppingBasket} alt="add to basket" />
+            {/* <div className={Styles.iconContainer}>
+            <img
+              src={ShoppingBasket}
+              alt="Add to basket"
+              className={Styles.addToCartIcon}
+              onClick={handleAddToCart}
+            />
+          </div> */}
           </div>
         </section>
       </div>

@@ -82,16 +82,26 @@ useEffect(() => {
           </div>
           <div className={Styles.detailsContainer} key={product.id}>
             <h2>{product.name}</h2>
-            <p className={Styles.price}>{product.price.amount} {product.price.currency}</p>
+            <p className={Styles.price}>
+              {product.price.amount} {product.price.currency}
+            </p>
             <p className={Styles.description}>{product.description}</p>
 
-            {/* Conditional rendering based on if the product is already in the cart */}
-            {isProductInCart(product.id) ? (
-              <Button disabled className="sage">
-                Already in cart
-              </Button>
+            {/* Disable button if product is not in stock */}
+            {product.inStock ? (
+              isProductInCart(product.id) ? (
+                <Button disabled className="sage">
+                  Already in cart
+                </Button>
+              ) : (
+                <Button className="sage" onClick={() => addToCart(product)}>
+                  Add to cart
+                </Button>
+              )
             ) : (
-              <Button className= "sage" onClick={() => addToCart(product)}>Add to cart</Button>
+              <Button disabled className="sage">
+                Out of stock
+              </Button>
             )}
 
             <Accordion title="Pickup and returns">
