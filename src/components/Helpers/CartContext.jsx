@@ -20,7 +20,7 @@ const addToCart = (product) => {
     setCartItems((prevItems) => [...prevItems, product]);
     setIsCartOpen(true);
     setLastAdded(product); // Update the last added product
-    setTimeout(() => setLastAdded(null), 3000); // Reset lastAdded after 3 seconds
+    setTimeout(() => setLastAdded(null), 5000); // Reset lastAdded after 3 seconds
   }
 };
   const isProductInCart = (productId) => {

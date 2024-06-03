@@ -85,5 +85,8 @@
 
 .checkbox {
   margin-top: 1rem;
+  font-family: var(--body-font);
+  font-size: var(--small-text);
+  color: var(--dark-leaf);
 }
 
