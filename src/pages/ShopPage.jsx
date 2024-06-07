@@ -6,6 +6,7 @@ import Styles from "./CategoryPages.module.css";
 
 import Header from "../components/Header/Header";
 import SortFilter from "../components/SortFilter/SortFIlter";
+import CupsHeader from "../assets/cupsHeader.png"; 
 
 export default function ShopPage () {
     const { filteredProducts, searchQuery, setSearchQuery } =
@@ -14,7 +15,7 @@ export default function ShopPage () {
 
   return (
     <div>
-      <Header title="shop" />
+      <Header title="shop" backgroundImage={CupsHeader} />
       <div className={`${Styles.searchContainer} page`}> 
         <ProductCount count={filteredProducts.length} />
         <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />

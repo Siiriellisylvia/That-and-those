@@ -1,0 +1,82 @@
+.contactPage {
+    padding:2rem 0rem;
+}
+
+.contactSubheadingContainer {
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 0rem 2rem 0rem;
+}
+.contactSubheadingSection {
+    width: 40rem;
+}
+
+.contactForm {
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.formGroup {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.formGroup label {
+  width: 5rem; /* Set a fixed width for the labels */
+  text-align: left;
+  margin: 0rem 0.5rem 0rem 0rem;
+  font-family: var(--heading-font);
+  font-weight: var(--font-weight-bold);
+  color: var(--leaf-dark);
+  font-size: var(--h4-size);
+}
+
+.formGroup input,
+.formGroup textarea {
+  flex: 1; /* Allow the input fields to take up the remaining space */
+  padding: 0.5rem;
+  font-size: var(--p-size);
+  outline:none;
+  border: solid 1px var(--sage);
+}
+
+.formGroup input:focus {
+    box-shadow: none;
+    background-color: var(--sage-25);
+}
+
+.formGroup textarea {
+  height: 5rem; /* Adjust the height of the textarea as needed */
+  font-family: var(--body-font);
+
+}
+
+.privacyPolicyTerms {
+  margin-left:5.5rem;
+}
+
+.privacyPolicyTerms label input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+.privacyPolicyTerms > a, label{
+    font-family: var(--body-font);
+    font-size: var(--p-size);
+    color: var(--leaf-dark);
+    margin-top: 1rem;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 1rem;
+}
+
+.buttonContainer Button {
+  margin-left:5.5rem;
+  width:20rem;
+}
+

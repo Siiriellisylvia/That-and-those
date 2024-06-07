@@ -101,7 +101,7 @@ export default function NavBar() {
                 <Link to="/shop/plantpots" onClick={handleLinkClick}>
                   plant pots
                 </Link>
-                <Link to="/shop/thegoodcollection" onClick={handleLinkClick}>
+                <Link to="/shop/good" onClick={handleLinkClick}>
                   the good collection
                 </Link>
               </div>

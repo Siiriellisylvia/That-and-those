@@ -11,7 +11,10 @@ background-color: var(--leaf);
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 4rem;
-    background-color: var(--sage-light);
+    background-color:none;
+    opacity:100%;
+    margin-top:0;
+    background-color: #d4d3c0;
 }
 
 .NavBarLinks {

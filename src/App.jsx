@@ -26,7 +26,7 @@ function App() {
           <Route path="/products/:productId" element={<ProductPage />} />
           <Route path="/shop/cups" element={<CupsPage />} />
           <Route
-            path="/shop/thegoodcollection"
+            path="/shop/good"
             element={<GoodCollectionPage />}
           />
           <Route path="/shop/bowls" element={<BowlsPage />} />

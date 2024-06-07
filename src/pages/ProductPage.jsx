@@ -58,74 +58,77 @@ useEffect(() => {
     <div className="page">
       {product ? (
         <>
-            {product.categories && product.categories[0] && (
+          {product.categories && product.categories[0] && (
             <Breadcrumbs category={product.categories[0]} />
           )}
-        <div className={Styles.productPageContainer}>
-          <div className={Styles.thumbnailsContainer}>
-            {/* Map through the thumbnail images and render an img element for each thumbnail */}
-            {product.thumbnailImages.map((img, index) => (
+          <div className={Styles.productPageContainer}>
+            <div className={Styles.thumbnailsContainer}>
+              {/* Include the main image as the first thumbnail */}
+              {[product.mainImage, ...product.thumbnailImages].map(
+                (img, index) => (
+                  <img
+                    key={index}
+                    src={img}
+                    alt={`Thumbnail ${index}`}
+                    className={
+                      activeImage === img
+                        ? Styles.activeThumbnail
+                        : Styles.thumbnail
+                    }
+                    onClick={() => handleThumbnailClick(img)}
+                  />
+                )
+              )}
+            </div>
+            <div className={Styles.mainImageContainer}>
               <img
-                key={index}
-                src={img}
-                alt={`Thumbnail ${index}`}
-                className={
-                  activeImage === img
-                    ? Styles.activeThumbnail
-                    : Styles.thumbnail
-                }
-                onClick={() => handleThumbnailClick(img)}
+                src={activeImage}
+                alt="Main Display"
+                className={Styles.mainImage}
               />
-            ))}
-          </div>
-          <div className={Styles.mainImageContainer}>
-            <img
-              src={activeImage}
-              alt="Main Display"
-              className={Styles.mainImage}
-            />
-          </div>
-          <div className={Styles.detailsContainer} key={product.id}>
-            <h2>{product.name}</h2>
-            <p className={Styles.price}>
-              {product.price.amount} {product.price.currency}
-            </p>
-            <p className={Styles.description}>{product.description}</p>
+            </div>
+            <div className={Styles.detailsContainer} key={product.id}>
+              <h2>{product.name}</h2>
+              <p className={Styles.price}>
+                {product.price.amount} {product.price.currency}
+              </p>
+              <p className={Styles.description}>{product.description}</p>
 
-            {/* Disable button if product is not in stock */}
-            {product.inStock ? (
-              isProductInCart(product.id) ? (
-                <Button disabled className="sage">
-                  Already in cart
-                </Button>
+              {/* Disable button if product is not in stock */}
+              {product.inStock ? (
+                isProductInCart(product.id) ? (
+                  <Button disabled className="sage">
+                    Already in cart
+                  </Button>
+                ) : (
+                  <Button className="sage" onClick={() => addToCart(product)}>
+                    Add to cart
+                  </Button>
+                )
               ) : (
-                <Button className="sage" onClick={() => addToCart(product)}>
-                  Add to cart
+                <Button disabled className="sage">
+                  Out of stock
                 </Button>
-              )
-            ) : (
-              <Button disabled className="sage">
-                Out of stock
-              </Button>
-            )}
+              )}
 
-            <Accordion title="Pickup and returns">
-              Only pickup in Aarhus C, returns within 14 days
-            </Accordion>
-            <Accordion title="Measurements">
-              <div>
-                Capacity: {product.measurements.capacity}
-                <br />
-                Height: {product.measurements.height}
-                <br />
-                Weight: {product.measurements.weight}
-              </div>
-            </Accordion>
-            <Accordion title="Care instructions">
-              Microwave, freezer, oven safe
-            </Accordion>
+              <Accordion title="Pickup and returns">
+                Only pickup in Aarhus C, returns within 14 days
+              </Accordion>
+              <Accordion title="Measurements">
+                <div>
+                  Capacity: {product.measurements.capacity}
+                  <br />
+                  Height: {product.measurements.height}
+                  <br />
+                  Weight: {product.measurements.weight}
+                </div>
+              </Accordion>
+              <Accordion title="Care instructions">
+                Microwave, freezer, oven safe
+              </Accordion>
+            </div>
           </div>
-        </div></>
+        </>
       ) : (
         <p>Loading product...</p>
       )}

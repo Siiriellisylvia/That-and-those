@@ -2,17 +2,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--sage);
-    height:30rem;
+    background-color: var(--blush-light);
+    height:35rem;
     width:100%;
     margin: 2rem 0rem;
 }
 
 .bannerContent {
-    width: 50%;
+    width: 60%;
     display: flex;
     flex-direction: column;
-    padding: 2rem 2rem 2rem 4rem;
+    padding: 0rem 8rem 0rem 8rem;
 }
 
 .bannerContent > Button {
@@ -20,6 +20,8 @@
     width:50%;
 }
 .bannerImage{
-    width: 50%;
+    width: 30%;
     height: 100%;
+    object-fit: cover;
+    margin-right: 4rem;
 }
