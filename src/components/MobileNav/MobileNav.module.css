@@ -1,0 +1,57 @@
+.NavBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  background-color: var(--off-white);
+  position: relative;
+  z-index: 100;
+}
+
+.NavBarIcons {
+  display: flex;
+  gap: 1rem;
+}
+
+.BurgerIcon {
+  display: block;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.MobileMenuContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: fixed;
+  top: 3.5rem; /* Adjust the top to be under the navbar */
+  left: 0;
+  width: 100%;
+  height: calc(100% - 3.5rem); /* Full height minus the navbar height */
+  background-color: var(--off-white);
+  z-index: 10;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.MobileMenuContent a {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+}
+
+.CartItemCount {
+  position: absolute;
+  top: 0.75rem;
+  right: 3rem;
+  background-color: var(--leaf);
+  color: var(--off-white);
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

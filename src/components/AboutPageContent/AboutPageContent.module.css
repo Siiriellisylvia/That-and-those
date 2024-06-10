@@ -9,6 +9,7 @@
     width:50%;
     display:flex;
     flex-direction: column;
+    margin-bottom:2rem;
 }
 
 .content h1 {
@@ -19,5 +20,5 @@
 }
 
 .content p {
-    padding:1rem;
+    padding:0rem 1rem;
 }

@@ -3,6 +3,9 @@ import SearchBar from "../components/SearchBar/SearchBar";
 import Header from "../components/Header/Header";
 import useProductFilter from "../components/Helpers/useProductFilter";
 import BowlsHeader from "../assets/bowlsHeader.png";
+import ProductCount from "../components/ProductCount/ProductCount";
+import Styles from "./CategoryPages.module.css";
+import SortFilter from "../components/SortFilter/SortFIlter";
 
 export default function BowlsPage() {
   const { filteredProducts, searchQuery, setSearchQuery } =
@@ -10,11 +13,18 @@ export default function BowlsPage() {
 
   return (
     <>
-    <div>
-      <Header title="bowls" backgroundImage={BowlsHeader}/>
-      <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
-      <ProductList products={filteredProducts} />
-    </div>
+      <div>
+        <Header title="bowls" backgroundImage={BowlsHeader} />
+        <div className={`${Styles.searchContainer} page`}>
+          <ProductCount count={filteredProducts.length} />
+          <SearchBar
+            searchQuery={searchQuery}
+            setSearchQuery={setSearchQuery}
+          />
+          <SortFilter />
+        </div>
+        <ProductList products={filteredProducts} />
+      </div>
     </>
   );
 }

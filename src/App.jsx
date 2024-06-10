@@ -4,7 +4,6 @@ import HomePage from "./pages/HomePage";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import AboutPage from "./pages/AboutPage";
-import Playground from "./components/Playground/Playground";
 import CupsPage from "./pages/CupsPage";
 import BowlsPage from "./pages/BowlsPage";
 import ProductPage from "./pages/ProductPage";
@@ -25,15 +24,11 @@ function App() {
           <Route path="/shop" element={<ShopPage />} />
           <Route path="/products/:productId" element={<ProductPage />} />
           <Route path="/shop/cups" element={<CupsPage />} />
-          <Route
-            path="/shop/good"
-            element={<GoodCollectionPage />}
-          />
+          <Route path="/shop/good" element={<GoodCollectionPage />} />
           <Route path="/shop/bowls" element={<BowlsPage />} />
           <Route path="/shop/plates" element={<PlatesPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/playground" element={<Playground />} />
         </Routes>
         <Footer />
       </main>

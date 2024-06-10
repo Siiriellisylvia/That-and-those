@@ -21,3 +21,19 @@
 .categoryLinks a.selected {
     color: var(--dark-leaf);
 }
+
+/* Styles for mobile screens */
+@media (max-width: 768px) {
+    .categoryLinks {
+        display: flex;
+        align-items: center;
+        margin:0rem;
+        gap:1rem;
+    }
+
+    .categoryLinks a {
+        font-size: var(--h4-size);
+        padding: 1rem 0rem 1rem 0rem;
+        font-weight: var(--font-weight-bold);
+    }
+}

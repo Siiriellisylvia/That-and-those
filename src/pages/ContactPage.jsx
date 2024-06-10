@@ -81,7 +81,7 @@ export default function ContactPage() {
 
   return (
     <>
-      <Header title="Contact me" backgroundImage={CupsHeader} />
+      <Header title="contact me" backgroundImage={CupsHeader} />
       <section className={`${Styles.contactPage} page`}>
         <div className={Styles.contactSubheadingContainer}>
           <div className={Styles.contactSubheadingSection}>

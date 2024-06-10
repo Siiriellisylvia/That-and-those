@@ -97,3 +97,23 @@ h4 {
   width: 100%; /* Lock the width to prevent width adjustment */
   position: fixed; /* Optionally make body fixed */
 }
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .searchContainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .page {
+    padding: 0rem 1rem 0rem 1rem;
+  }
+
+    .hero {
+    font-family: var(--heading-font);
+    font-weight: var(--font-weight-bold);
+    color: var(--leaf);
+    font-size: 2.5rem;
+    letter-spacing: -1px;
+}
+  }

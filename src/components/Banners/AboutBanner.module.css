@@ -25,3 +25,26 @@
     object-fit: cover;
     margin-right: 4rem;
 }
+
+/* Styles for mobile screens */
+@media (max-width: 768px) {
+    .bannerContainer {
+        flex-direction: column;
+        height: auto;
+        width:100%;
+    }
+
+    .bannerContent {
+        padding:0rem 1rem 0rem 1rem;
+        }
+
+    .bannerContent > Button {
+        width: 100%;
+    }
+
+    .bannerImage {
+        width: 100%;
+        height: auto;
+        margin: 1rem 0rem 0rem 0rem;
+    }
+}

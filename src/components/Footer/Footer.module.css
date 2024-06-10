@@ -3,6 +3,8 @@
     width:100%
 }
 
+/*default styles for desktop screens */
+
 .content {
     display: flex;
     justify-content: space-between;
@@ -67,4 +69,50 @@
 .bottom img {
     width:8rem;
     height:auto;
+}
+
+/* Styles for mobile screens */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 2rem;
+    }
+
+    .about {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .links {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    .links > div {
+        margin-bottom: 1rem;
+    }
+
+    .linkList li {
+        font-size: var(--p-size-small);
+    }
+
+    .socials {
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+
+    .bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 2rem;
+        font-size: var(--p-size-small);
+    }
+
+    .bottom img {
+        margin-top: 1rem;
+        width: 100%;
+        max-width: 200px;
+    }
 }

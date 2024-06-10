@@ -21,3 +21,27 @@
   margin-top:2rem;
   width:50%;
 }
+/* Styles for mobile screens */
+@media (max-width: 768px) {
+  .heroContainer {
+    height: calc(100vh - 4rem);
+    padding: 0rem;
+  }
+
+  .heroContent {
+    width: 80%;
+    padding: 1rem;
+    text-align: left;
+    justify-content: flex-start;
+  }
+
+  .heroContent p {
+    font-size: var(--p-size-small);
+    padding: 0rem 4rem 0rem 0rem;
+  }
+
+  .heroContent Button {
+    width: 70%;
+    margin-top:1rem;
+  }
+}

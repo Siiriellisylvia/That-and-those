@@ -4,29 +4,25 @@ export default function AboutPageContent() {
     return (
       <section className={Styles.contentContainer}>
         <div className={Styles.content}>
-          <h1>About Page</h1>
+          <h1>about me</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-            commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-            penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-            Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-            Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
-            aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
-            imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
-            mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum
-            semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
-            porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
-            ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
-            nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
-            Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies
-            nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
-            condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem
-            neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar,
-            hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus.
-            Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.
-            Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed
-            fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed
-            consequat, leo eget bibendum sodales, augue velit cursus nunc,
+            I’m Siiri, the one behind the wheel! I’m originally from Finland,
+            but have lived in many countries the past 10 years. The ceramics
+            story begins in Barcelona, where I decided to try  ceramics for the
+            first time. I signed up for classes, where I practiced throwing
+            pieces on the wheel, and building objects by hand.</p>
+            <p>Soon I realized
+            it was not enough to go to classes once a week, and I decided to
+            rent a co-working space in the studio I took classes at. I had free
+            access, and became a part of the ceramic artist community.</p> 
+            <p>I experimented with glazes, practiced my techniques and slowly
+            developed my skills as a ceramic artist.  We started organising
+            pop-up shops where we sold ceramics made by artists in our studio,
+            and it was a great motivator to keep learning and producing better
+            pieces.  After a while, I started teaching ceramics to my friends
+            that wanted to take classes, and slowly ended up teaching people I
+            didn’t know as well. I ended up doing ceramics full time for a year,
+            even teaching some classes at the studio, before moving to Denmark.
           </p>
         </div>
       </section>

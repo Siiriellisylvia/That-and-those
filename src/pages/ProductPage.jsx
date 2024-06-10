@@ -120,7 +120,7 @@ useEffect(() => {
                   <br />
                   Height: {product.measurements.height}
                   <br />
-                  Weight: {product.measurements.weight}
+                  Width: {product.measurements.width}
                 </div>
               </Accordion>
               <Accordion title="Care instructions">

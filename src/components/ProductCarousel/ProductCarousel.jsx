@@ -54,6 +54,11 @@ export default function ProductCarousel({ category, setHasProducts}) {
         pagination: false,
         arrows: showArrows,
         padding: 0,
+        breakpoints: {
+      768: {
+        perPage: 2,
+        gap: '0.5rem',
+      }}
       }}
     >
       {/* Map through the products array and render a ProductCard component for each product} */}

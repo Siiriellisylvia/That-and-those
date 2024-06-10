@@ -7,6 +7,7 @@
   background-color: rgba(0,0,0,0.5);
   display: flex;
   justify-content: flex-end;
+  z-index:100;
 }
 
 .modalContent {
@@ -34,4 +35,11 @@
   border: none;
   background: none;
   cursor: pointer;
+}
+
+/* Styles for mobile screens */
+@media (max-width: 768px) {
+  .modalContent {
+    width: 100%;
+  }
 }
