@@ -2,7 +2,7 @@ import ProductList from "../components/ProductList/ProductList";
 import SearchBar from "../components/SearchBar/SearchBar";
 import Header from "../components/Header/Header";
 import useProductFilter from "../components/Helpers/useProductFilter";
-import PlatesHeader from "../assets/platesHeader.png";
+import PlatesHeader from "../assets/platesHeader1.png";
 import ProductCount from "../components/ProductCount/ProductCount";
 import Styles from "./CategoryPages.module.css";
 import SortFilter from "../components/SortFilter/SortFIlter";

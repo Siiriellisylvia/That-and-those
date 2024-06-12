@@ -6,7 +6,7 @@ import Styles from "./CategoryPages.module.css";
 import ProductCount from '../components/ProductCount/ProductCount';
 import SortFilter from '../components/SortFilter/SortFIlter';
 import Cart from '../components/Cart/Cart';
-import CupsHeader4 from '../assets/cupsHeader4.png';
+import CupsHeader from '../assets/cupsHeaderSmall1.png';
 
 
 export default function CupsPage () {
@@ -17,7 +17,7 @@ export default function CupsPage () {
     <div>
       <Header
         title="cups"
-        backgroundImage={CupsHeader4}
+        backgroundImage={CupsHeader}
       />
       <div className={`${Styles.searchContainer} page`}>
         <ProductCount count={filteredProducts.length} />

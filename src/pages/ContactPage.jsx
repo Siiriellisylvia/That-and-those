@@ -3,7 +3,7 @@ import emailjs from "emailjs-com";
 import Header from "../components/Header/Header";
 import Styles from "./ContactPage.module.css";
 import Button from "../components/Button/Button";
-import CupsHeader from "../assets/cupsHeader.png";
+import CupsHeader from "../assets/cupsHeaderSmall.png";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -100,7 +100,6 @@ export default function ContactPage() {
               type="text"
               id="from_name"
               name="from_name"
-              placeholder="just your first name will do!"
               value={formData.from_name}
               onChange={handleChange}
               required

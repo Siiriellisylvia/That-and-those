@@ -1,0 +1,32 @@
+.banner {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+  background-image: url('../../assets/cupsHeaderRotated.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.content {
+  color: var(--dark-leaf); 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width:50%;
+  padding:2rem 4rem 2rem 4rem;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  width:100%;
+}
+
+.logo {
+  height: 3rem;
+}

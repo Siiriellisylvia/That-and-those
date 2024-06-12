@@ -10,7 +10,9 @@ export default function HeroBanner() {
         <div className={Styles.heroContent}>
             <h1 className="hero">that and those ceramics</h1>
             <p>
-                Handmade ceramics made in Aarhus, with sustainability in focus. Every piece is unique and made to be enjoyed in everyday moments. 
+                Handmade ceramics made in Aarhus, with sustainability in focus. 
+                You get what you see, as there is only one of each product.
+                <p>They are made to last and be enjoyed every day - don't you dare use my ceramics for special occassions only!</p>
             </p>
             <Link to ="/shop"><Button className="leaf">Explore products</Button></Link>
         </div>

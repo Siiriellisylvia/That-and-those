@@ -30,7 +30,7 @@ console.log("Selected Category in HomeProductModule:", selectedCategory);
         return (
           <div className="page">
             <div className={Styles.homeProductModule}>
-              <h4>New products</h4>
+              <h4>new products</h4>
               <CategoryLinks
                 onCategoryChange={handleCategoryChange}
                 selectedCategory={selectedCategory}

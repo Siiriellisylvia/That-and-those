@@ -20,8 +20,8 @@
 }
 
 .sage:hover {
-  background-color: var(--leaf);
-  color: var(--off-white);
+  background-color: var(--sage-75);
+  color: var(--leaf);
   transition: all 0.3s ease;
 
 }

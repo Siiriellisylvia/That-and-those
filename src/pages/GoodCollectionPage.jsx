@@ -2,7 +2,7 @@ import ProductList from "../components/ProductList/ProductList";
 import SearchBar from "../components/SearchBar/SearchBar";
 import Header from "../components/Header/Header";
 import useProductFilter from "../components/Helpers/useProductFilter";
-import GoodHeader from "../assets/cupsHeader.png";
+import GoodHeader from "../assets/cupsHeaderSmall.png";
 import ProductCount from "../components/ProductCount/ProductCount";
 import Styles from "./CategoryPages.module.css";
 import SortFilter from "../components/SortFilter/SortFIlter";

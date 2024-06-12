@@ -6,7 +6,7 @@ import Styles from "./CategoryPages.module.css";
 
 import Header from "../components/Header/Header";
 import SortFilter from "../components/SortFilter/SortFIlter";
-import CupsHeader from "../assets/cupsHeader.png"; 
+import CupsHeader from "../assets/cupsHeaderSmall.png"; 
 
 export default function ShopPage () {
     const { filteredProducts, searchQuery, setSearchQuery } =

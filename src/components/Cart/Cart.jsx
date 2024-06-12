@@ -5,7 +5,7 @@ import { useCart } from "../Helpers/UseCart.jsx";
 import CloseButton from "../../assets/icons/close_small.svg";
 import Remove from "../../assets/icons/delete_400.svg";
 import Checkmark from "../../assets/icons/check_circle.svg";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 export default function Cart() {
@@ -66,7 +66,7 @@ export default function Cart() {
               </div>
             </>
           ) : (
-            <h4 className={Styles.emptyCartMessage}>Your cart is empty</h4>
+            <h4 className={Styles.emptyCartMessage}>There are no products here yet :(</h4>
           )}
 
           <div className={Styles.bottom}>
@@ -79,7 +79,7 @@ export default function Cart() {
               <input type="checkbox" id="terms" />
               <label htmlFor="terms">I accept the terms and conditions</label>
             </div>
-            <Button className="leaf">Go to checkout</Button>
+            <Link to="/contact"><Button className="leaf">Contact to order</Button></Link>
           </div>
         </div>
       </Modal>
